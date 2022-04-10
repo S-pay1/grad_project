@@ -33,7 +33,7 @@ class HomecubitCubit extends Cubit<HomecubitState> {
   ];
 
   List<String> ChosseService = [
-    'ewe',
+    'gas',
     'water',
     'electric',
     'phone',
@@ -67,11 +67,8 @@ class HomecubitCubit extends Cubit<HomecubitState> {
 
   // }
   void changeindexscreen(int index) {
-    var index = 6;
+    currentIndex = index;
 
-    while (i <= index) {
-      i++;
-      emit(HomecubitService());
-    }
+    emit(HomecubitService());
   }
 }

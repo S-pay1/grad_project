@@ -58,7 +58,7 @@ class MyApp extends StatelessWidget {
               backgroundColor: Colors.transparent,
               centerTitle: true,
               foregroundColor: Color(0xff004B7d))),
-      home: Otp(),
+      home: Homelayout(),
     );
   }
 }

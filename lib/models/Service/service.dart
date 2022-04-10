@@ -35,7 +35,7 @@ class Service_Screen extends StatelessWidget {
                     },
                     icon: Icon(Icons.arrow_back)),
                 title: Text(
-                  cubit.ChosseService[HomecubitCubit.get(context).i],
+                  cubit.ChosseService[HomecubitCubit.get(context).currentIndex],
                 )),
             body: Padding(
               padding: const EdgeInsets.all(20.0),
@@ -45,8 +45,8 @@ class Service_Screen extends StatelessWidget {
                   defaultFormField(
                     controller: num,
                     type: TextInputType.number,
-                    /*validation: validation,*/ label:
-                        cubit.Servicecode[HomecubitCubit.get(context).i],
+                    /*validation: validation,*/ label: cubit
+                        .Servicecode[HomecubitCubit.get(context).currentIndex],
                   ),
                   SizedBox(
                     height: 18,
