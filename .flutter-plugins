@@ -1,8 +1,4 @@
 # This is a generated file; do not edit or check into version control.
-firebase_auth=D:\\flutter\\.pub-cache\\hosted\\pub.dartlang.org\\firebase_auth-3.3.12\\
-firebase_auth_web=D:\\flutter\\.pub-cache\\hosted\\pub.dartlang.org\\firebase_auth_web-3.3.10\\
-firebase_core=D:\\flutter\\.pub-cache\\hosted\\pub.dartlang.org\\firebase_core-1.14.0\\
-firebase_core_web=D:\\flutter\\.pub-cache\\hosted\\pub.dartlang.org\\firebase_core_web-1.6.1\\
 flutter_plugin_android_lifecycle=D:\\flutter\\.pub-cache\\hosted\\pub.dartlang.org\\flutter_plugin_android_lifecycle-2.0.5\\
 fluttertoast=D:\\flutter\\.pub-cache\\hosted\\pub.dartlang.org\\fluttertoast-8.0.9\\
 local_auth=D:\\flutter\\.pub-cache\\hosted\\pub.dartlang.org\\local_auth-1.1.11\\

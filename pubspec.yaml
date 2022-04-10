@@ -40,8 +40,7 @@ dependencies:
   uuid: 3.0.6
   hash: ^1.0.1
   crypto: ^3.0.1
-  firebase_auth: ^3.3.12
-  firebase_core: ^1.14.0
+  
   otp: ^3.0.2
   
 
