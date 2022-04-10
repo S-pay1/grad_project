@@ -2,12 +2,7 @@
 
 import 'package:flutter/material.dart';
 import 'package:flutter_bloc/flutter_bloc.dart';
-import 'package:udemy_flutter/models/Service/elecrtic.dart';
-import 'package:udemy_flutter/models/Service/gas.dart';
-import 'package:udemy_flutter/models/Service/landing.dart';
-import 'package:udemy_flutter/models/Service/phone.dart';
-import 'package:udemy_flutter/models/Service/water.dart';
-import 'package:udemy_flutter/models/Service/wifi.dart';
+
 import 'package:udemy_flutter/models/choose%20type%20of%20user/ChooseTypeOfUser.dart';
 import 'package:udemy_flutter/modules/cubit/homecubit_cubit.dart';
 import 'package:udemy_flutter/modules/cubit/homecubit_state.dart';
@@ -233,7 +228,8 @@ class home extends StatelessWidget {
                                 Navigator.pushReplacement(
                                     context,
                                     MaterialPageRoute(
-                                        builder: (context) => Electronic()));
+                                        builder: (context) =>
+                                            Service_Screen()));
                               },
                               child: Container(
                                 child: Column(
@@ -275,7 +271,8 @@ class home extends StatelessWidget {
                                 Navigator.pushReplacement(
                                     context,
                                     MaterialPageRoute(
-                                        builder: (context) => Phone()));
+                                        builder: (context) =>
+                                            Service_Screen()));
                               },
                               child: Container(
                                 child: Column(
@@ -321,7 +318,8 @@ class home extends StatelessWidget {
                                 Navigator.pushReplacement(
                                     context,
                                     MaterialPageRoute(
-                                        builder: (context) => Landing()));
+                                        builder: (context) =>
+                                            Service_Screen()));
                               },
                               child: Container(
                                 child: Column(
@@ -363,7 +361,8 @@ class home extends StatelessWidget {
                                 Navigator.pushReplacement(
                                     context,
                                     MaterialPageRoute(
-                                        builder: (context) => Wifi()));
+                                        builder: (context) =>
+                                            Service_Screen()));
                               },
                               child: Container(
                                 child: Column(

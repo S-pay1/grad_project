@@ -67,8 +67,8 @@ class Service_Screen extends StatelessWidget {
                   defaultFormField(
                     controller: text,
                     type: TextInputType.text,
-                    /*validation: validation,*/ label:
-                        cubit.ServicCompany[HomecubitCubit.get(context).i],
+                    /*validation: validation,*/ label: cubit.ServicCompany[
+                        HomecubitCubit.get(context).currentIndex],
                   ),
                   SizedBox(
                     height: 18,
