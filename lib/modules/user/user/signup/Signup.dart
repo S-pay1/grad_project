@@ -3,7 +3,10 @@
 import 'package:conditional_builder/conditional_builder.dart';
 import 'package:flutter/material.dart';
 import 'package:flutter_bloc/flutter_bloc.dart';
+import 'package:udemy_flutter/models/Otpss/cubit/otp_cubit.dart';
 import 'package:udemy_flutter/models/payment/Otp.dart';
+import 'package:udemy_flutter/modules/user/user/signup/Register_model.dart';
+import 'package:udemy_flutter/modules/user/user/signup/Register_model.dart';
 import 'package:udemy_flutter/modules/user/user/signup/cubit/register_cubit.dart';
 import 'package:udemy_flutter/shared/components/components.dart';
 
@@ -11,6 +14,7 @@ import '../../../../models/layout/home/homePageLayout.dart';
 
 import '../../../../shared/rejex.dart';
 import '../login/login_screen.dart';
+import 'Register_model.dart';
 
 class SignUp extends StatelessWidget {
   var phoneController = TextEditingController();
@@ -21,6 +25,8 @@ class SignUp extends StatelessWidget {
   bool ispassword = true;
   bool value = false;
   final rejexfullname = fullNameValidator;
+  final rejexPhone = phoneNumberValidator;
+  String ID;
   @override
   Widget build(BuildContext context) {
     return BlocProvider(
@@ -75,30 +81,15 @@ class SignUp extends StatelessWidget {
                         height: 20,
                       ),
                       defaultFormField(
-                          controller: phoneController,
-                          type: TextInputType.number,
-                          label: 'Phone',
-                          prefix: Icons.phone,
-                          validate: (String value) {
-                            if (value.isEmpty) {
-                              return 'Please Enter Your Password';
-                            }
-                            return null;
-                          }),
+                        controller: phoneController,
+                        type: TextInputType.number,
+                        label: 'Phone',
+                        prefix: Icons.phone,
+                        validate: rejexPhone,
+                      ),
                       SizedBox(
                         height: 20,
                       ),
-                      /*defaultFormField(
-                          controller: emailController,
-                          type: TextInputType.emailAddress,
-                          label: 'emil',
-                          prefix: Icons.email,
-                          validate: (String value) {
-                            if (value.isEmpty) {
-                              return 'Please Enter Your Password';
-                            }
-                            return null;
-                          }),*/
                       SizedBox(
                         height: 20,
                       ),
@@ -159,8 +150,11 @@ class SignUp extends StatelessWidget {
                                   name: nameController.text,
                                   phone: phoneController.text,
                                 );
+                                // OtpCubit.get(context).model.data.id;
+                                // RegisterModel.data.id;
                               }
-                              Navigator.pushReplacement(
+
+                              return Navigator.push(
                                   context,
                                   MaterialPageRoute(
                                       builder: (context) => Otp()));

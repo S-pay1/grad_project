@@ -14,6 +14,7 @@ class Otp extends StatelessWidget {
     final _formKey = GlobalKey<FormState>();
     var phoneController = TextEditingController();
     var OTPcontroller = TextEditingController();
+    String ID;
 
     return BlocProvider(
       create: (BuildContext context) => OtpCubit(),

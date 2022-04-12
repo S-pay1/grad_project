@@ -2,8 +2,10 @@
 
 // ignore: must_be_immutable
 import 'package:conditional_builder/conditional_builder.dart';
+import 'package:fl_toast/fl_toast.dart';
 import 'package:flutter/material.dart';
 import 'package:flutter_bloc/flutter_bloc.dart';
+import 'package:fluttertoast/fluttertoast.dart';
 import 'package:udemy_flutter/modules/user/user/termsuser.dart';
 
 import '../../../../models/layout/home/homePageLayout.dart';
@@ -31,6 +33,12 @@ class LoginScreen extends StatelessWidget {
                     MaterialPageRoute(builder: (context) => Homelayout()));
               } else {
                 print(state.model.message);
+                Fluttertoast.showToast(
+                  msg: state.model.message,
+                  backgroundColor: Colors.red,
+                  fontSize: 16,
+                  gravity: ToastGravity.BOTTOM,
+                );
               }
             }
           },

@@ -29,10 +29,10 @@ class Homelayout extends StatelessWidget {
                 style: TextStyle(color: Color(0xff003B75)),
               ),
             ),*/
-            body: cubit.screens[HomecubitCubit.get(context).currentIndex],
+            body: cubit.screens[cubit.currentindex],
             bottomNavigationBar: BottomNavigationBar(
               fixedColor: Color(0xff003B75),
-              currentIndex: cubit.currentIndex,
+              currentIndex: cubit.currentindex,
               onTap: (index) {
                 cubit.changeindex(index);
               },

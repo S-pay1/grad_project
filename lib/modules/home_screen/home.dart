@@ -1,4 +1,4 @@
-// ignore_for_file: missing_required_param
+// ignore_for_file: missing_required_param, non_constant_identifier_names
 
 import 'package:flutter/material.dart';
 import 'package:flutter_bloc/flutter_bloc.dart';
@@ -6,29 +6,23 @@ import 'package:flutter_bloc/flutter_bloc.dart';
 import 'package:udemy_flutter/models/choose%20type%20of%20user/ChooseTypeOfUser.dart';
 import 'package:udemy_flutter/modules/cubit/homecubit_cubit.dart';
 import 'package:udemy_flutter/modules/cubit/homecubit_state.dart';
-import 'dart:ui';
-
 import 'package:udemy_flutter/shared/components/components.dart';
+import 'dart:ui';
 
 import '../../models/Service/service.dart';
 import '../../models/payment/about_us.dart';
 import '../../models/payment/contact_us.dart';
 
 class home extends StatelessWidget {
-  // var phoneController = TextEditingController();
-  // var passwordController = TextEditingController();
-  // var emailController = TextEditingController();
-  // var nameController = TextEditingController();
-  // final phonerRegx = phoneNumberValidator;
-  // final emailregex = EmailValidator;
-  // final FullRegex = FullNameValidator;
   final _formKey = GlobalKey<FormState>();
   bool ispassword = true;
   bool value = false;
 
   @override
   Widget build(BuildContext context) {
+    var cubit = HomecubitCubit.get(context);
     Size size = MediaQuery.of(context).size;
+
     return BlocProvider(
       create: (BuildContext context) => HomecubitCubit(),
       child: BlocConsumer<HomecubitCubit, HomecubitState>(
@@ -132,88 +126,14 @@ class home extends StatelessWidget {
                       ),
                       Row(
                         children: [
-                          Expanded(
-                            child: GestureDetector(
-                              onTap: () {
-                                Navigator.pushReplacement(
-                                    context,
-                                    MaterialPageRoute(
-                                        builder: (context) =>
-                                            Service_Screen()));
-                              },
-                              child: Container(
-                                child: Column(
-                                  mainAxisAlignment: MainAxisAlignment.center,
-                                  children: [
-                                    Image(
-                                      image: AssetImage(
-                                          'assets/images/image (8).png'),
-                                      height: size.height * 0.10,
-                                      width: size.width * 0.14,
-                                      //height: 100,
-                                      //width: 100,
-                                    ),
-                                    Text(
-                                      'gaz',
-                                      style: TextStyle(
-                                          fontSize: 18.0, color: Colors.white),
-                                    ),
-                                  ],
-                                ),
-                                decoration: BoxDecoration(
-                                  border:
-                                      Border.all(color: Colors.white, width: 3),
-                                  borderRadius: BorderRadius.circular(
-                                    15.0,
-                                  ),
-                                ),
-                                height: 140,
-                                width: 110,
-                              ),
-                            ),
+                          ServicesButton(
+                            image: 'assets/images/image (8).png',
+                            text: 'gas',
                           ),
-                          SizedBox(
-                            width: 70,
-                          ),
-                          Expanded(
-                            child: GestureDetector(
-                              onTap: () {
-                                Navigator.pushReplacement(
-                                    context,
-                                    MaterialPageRoute(
-                                        builder: (context) =>
-                                            Service_Screen()));
-                              },
-                              child: Container(
-                                child: Column(
-                                  mainAxisAlignment: MainAxisAlignment.center,
-                                  children: [
-                                    Image(
-                                      image: AssetImage(
-                                          'assets/images/image (11).png'),
-                                      height: size.height * 0.10,
-                                      width: size.width * 0.20,
-                                      //height: 100,
-                                      //width: 100,
-                                    ),
-                                    Text(
-                                      'water',
-                                      style: TextStyle(
-                                          fontSize: 18.0, color: Colors.white),
-                                    ),
-                                  ],
-                                ),
-                                decoration: BoxDecoration(
-                                  border:
-                                      Border.all(color: Colors.white, width: 3),
-                                  borderRadius: BorderRadius.circular(
-                                    15.0,
-                                  ),
-                                ),
-                                height: 140,
-                                width: 140,
-                              ),
-                            ),
+                          Spacer(),
+                          ServicesButton(
+                            image: 'assets/images/image (11).png',
+                            text: 'water',
                           ),
                         ],
                       ),
@@ -222,88 +142,14 @@ class home extends StatelessWidget {
                       ),
                       Row(
                         children: [
-                          Expanded(
-                            child: GestureDetector(
-                              onTap: () {
-                                Navigator.pushReplacement(
-                                    context,
-                                    MaterialPageRoute(
-                                        builder: (context) =>
-                                            Service_Screen()));
-                              },
-                              child: Container(
-                                child: Column(
-                                  mainAxisAlignment: MainAxisAlignment.center,
-                                  children: [
-                                    Image(
-                                      image: AssetImage(
-                                          'assets/images/image (7).png'),
-                                      height: size.height * 0.10,
-                                      width: size.width * 0.20,
-                                      //height: 100,
-                                      //width: 100,
-                                    ),
-                                    Text(
-                                      'Electric',
-                                      style: TextStyle(
-                                          fontSize: 18.0, color: Colors.white),
-                                    ),
-                                  ],
-                                ),
-                                decoration: BoxDecoration(
-                                  border:
-                                      Border.all(color: Colors.white, width: 3),
-                                  borderRadius: BorderRadius.circular(
-                                    15.0,
-                                  ),
-                                ),
-                                height: 140,
-                                width: 140,
-                              ),
-                            ),
+                          ServicesButton(
+                            image: 'assets/images/image (7).png',
+                            text: 'Electronic',
                           ),
-                          SizedBox(
-                            width: 70,
-                          ),
-                          Expanded(
-                            child: GestureDetector(
-                              onTap: () {
-                                Navigator.pushReplacement(
-                                    context,
-                                    MaterialPageRoute(
-                                        builder: (context) =>
-                                            Service_Screen()));
-                              },
-                              child: Container(
-                                child: Column(
-                                  mainAxisAlignment: MainAxisAlignment.center,
-                                  children: [
-                                    Image(
-                                      image: AssetImage(
-                                          'assets/images/image (12).png'),
-                                      height: size.height * 0.10,
-                                      width: size.width * 0.20,
-                                      //height: 100,
-                                      //width: 100,
-                                    ),
-                                    Text(
-                                      'Phone',
-                                      style: TextStyle(
-                                          fontSize: 18.0, color: Colors.white),
-                                    ),
-                                  ],
-                                ),
-                                decoration: BoxDecoration(
-                                  border:
-                                      Border.all(color: Colors.white, width: 3),
-                                  borderRadius: BorderRadius.circular(
-                                    15.0,
-                                  ),
-                                ),
-                                height: 140,
-                                width: 140,
-                              ),
-                            ),
+                          Spacer(),
+                          ServicesButton(
+                            image: 'assets/images/image (12).png',
+                            text: 'phone',
                           ),
                         ],
                       ),
@@ -312,93 +158,21 @@ class home extends StatelessWidget {
                       ),
                       Row(
                         children: [
-                          Expanded(
-                            child: GestureDetector(
-                              onTap: () {
-                                Navigator.pushReplacement(
-                                    context,
-                                    MaterialPageRoute(
-                                        builder: (context) =>
-                                            Service_Screen()));
-                              },
-                              child: Container(
-                                child: Column(
-                                  mainAxisAlignment: MainAxisAlignment.center,
-                                  children: [
-                                    Image(
-                                      image: AssetImage(
-                                          'assets/images/image (10).png'),
-                                      height: size.height * 0.11,
-                                      width: size.width * 0.11,
-                                      //height: 100,
-                                      //width: 100,
-                                    ),
-                                    Text(
-                                      'Landing',
-                                      style: TextStyle(
-                                          fontSize: 18.0, color: Colors.white),
-                                    ),
-                                  ],
-                                ),
-                                decoration: BoxDecoration(
-                                  border:
-                                      Border.all(color: Colors.white, width: 3),
-                                  borderRadius: BorderRadius.circular(
-                                    15.0,
-                                  ),
-                                ),
-                                height: 140,
-                                width: 140,
-                              ),
-                            ),
+                          ServicesButton(
+                            image: 'assets/images/image (10).png',
+                            text: 'landing',
                           ),
-                          SizedBox(
-                            width: 70,
-                          ),
-                          Expanded(
-                            child: GestureDetector(
-                              onTap: () {
-                                Navigator.pushReplacement(
-                                    context,
-                                    MaterialPageRoute(
-                                        builder: (context) =>
-                                            Service_Screen()));
-                              },
-                              child: Container(
-                                child: Column(
-                                  mainAxisAlignment: MainAxisAlignment.center,
-                                  children: [
-                                    Image(
-                                      image: AssetImage(
-                                          'assets/images/image (9).png'),
-                                      height: size.height * 0.10,
-                                      width: size.width * 0.10,
-                                      //height: 100,
-                                      //width: 100,
-                                    ),
-                                    Text(
-                                      'Wifi',
-                                      style: TextStyle(
-                                          fontSize: 18.0, color: Colors.white),
-                                    ),
-                                  ],
-                                ),
-                                decoration: BoxDecoration(
-                                  border:
-                                      Border.all(color: Colors.white, width: 3),
-                                  borderRadius: BorderRadius.circular(
-                                    15.0,
-                                  ),
-                                ),
-                                height: 140,
-                                width: 70,
-                              ),
+                          Spacer(),
+                          Container(
+                            child: ServicesButton(
+                              image: 'assets/images/image (9).png',
+                              text: 'wifi',
                             ),
                           ),
                         ],
                       ),
                       SizedBox(
-                        height: 5,
+                        height: 10,
                       ),
                       TextButton(
                           onPressed: () {

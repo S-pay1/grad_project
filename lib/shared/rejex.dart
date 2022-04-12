@@ -1,3 +1,5 @@
+// ignore_for_file: missing_return, unused_local_variable
+
 String phoneNumberValidator(String value) {
   Pattern pattern = r'^01[0125][0-9]{8}$';
 
@@ -27,3 +29,7 @@ String EmailAdrresValidator(String value) {
   else
     return null;
 }
+
+// String counter() {
+//   int counterIndex;
+// }

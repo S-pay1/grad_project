@@ -35,19 +35,17 @@ class Service_Screen extends StatelessWidget {
                     },
                     icon: Icon(Icons.arrow_back)),
                 title: Text(
-                  cubit.ChosseService[HomecubitCubit.get(context).currentIndex],
-                )),
+                    cubit.ChosseService[Global.indexOfServices].toString())),
             body: Padding(
               padding: const EdgeInsets.all(20.0),
               child: Column(
                 mainAxisAlignment: MainAxisAlignment.center,
                 children: [
                   defaultFormField(
-                    controller: num,
-                    type: TextInputType.number,
-                    /*validation: validation,*/ label: cubit
-                        .Servicecode[HomecubitCubit.get(context).currentIndex],
-                  ),
+                      controller: num,
+                      type: TextInputType.number,
+                      /*validation: validation,*/ label:
+                          cubit.Servicecode[Global.indexOfServices]),
                   SizedBox(
                     height: 18,
                   ),
@@ -65,11 +63,10 @@ class Service_Screen extends StatelessWidget {
                     value: 'ezz',
                   ),*/
                   defaultFormField(
-                    controller: text,
-                    type: TextInputType.text,
-                    /*validation: validation,*/ label: cubit.ServicCompany[
-                        HomecubitCubit.get(context).currentIndex],
-                  ),
+                      controller: text,
+                      type: TextInputType.text,
+                      /*validation: validation,*/ label:
+                          cubit.ServicCompany[Global.indexOfServices]),
                   SizedBox(
                     height: 18,
                   ),
@@ -90,4 +87,11 @@ class Service_Screen extends StatelessWidget {
       ),
     );
   }
+}
+
+// class global {
+//   static int counterIndex;
+// }
+class Global {
+  static int indexOfServices;
 }

@@ -3,6 +3,7 @@
 import 'package:bloc/bloc.dart';
 import 'package:flutter/material.dart';
 import 'package:flutter_bloc/flutter_bloc.dart';
+import 'package:udemy_flutter/models/Service/service.dart';
 //import 'package:udemy_flutter/models/user/user/login/login_model.dart';
 import 'package:udemy_flutter/shared/dio_helper.dart';
 import 'package:udemy_flutter/shared/end_points.dart';
@@ -16,9 +17,7 @@ class HomecubitCubit extends Cubit<HomecubitState> {
   HomecubitCubit() : super(HomecubitInitial());
 
   static HomecubitCubit get(context) => BlocProvider.of(context);
-
-  int currentIndex = 0;
-
+  int currentindex = 0;
   int i = 0;
 
   List<Widget> screens = [
@@ -32,6 +31,8 @@ class HomecubitCubit extends Cubit<HomecubitState> {
     'History',
   ];
 
+  int counterIndex;
+
   List<String> ChosseService = [
     'gas',
     'water',
@@ -41,23 +42,23 @@ class HomecubitCubit extends Cubit<HomecubitState> {
     'wifi',
   ];
   List<String> Servicecode = [
-    'code',
-    'code',
-    'code',
-    'phonenumber',
+    'Service code',
+    'Service code',
+    'Service code',
+    'phone number',
     'landing number',
     'number',
   ];
   List<String> ServicCompany = [
-    'code',
-    'code',
-    'code',
-    'phonenumber',
+    'company',
+    'company',
+    'company',
+    'Network',
     'landing number',
     'number',
   ];
   void changeindex(int index) {
-    currentIndex = index;
+    currentindex = index;
     emit(HomecubitBottomNav());
   }
 
@@ -66,9 +67,13 @@ class HomecubitCubit extends Cubit<HomecubitState> {
   //     emit(HomecubitService());
 
   // }
-  void changeindexscreen(int index) {
-    currentIndex = index;
+  int indexOfServices;
+  void changeindexscreen(text) {
+    Global.indexOfServices = ChosseService.indexOf(text);
+    // Global.indexOfServices = Servicecode.indexOf(text);
+    // Global.indexOfServices = ServicCompany.indexOf(text);
+    print(Global.indexOfServices);
 
-    emit(HomecubitService());
+    //emit(HomecubitService());
   }
 }

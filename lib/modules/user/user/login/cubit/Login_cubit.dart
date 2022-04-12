@@ -19,18 +19,21 @@ class loginCubit extends Cubit<loginState> {
 
   LoginModel model;
   void userlogin({
-    //@required String email,
     @required String phone,
     @required String password,
+    @required String typeOfUser,
   }) {
     var pas = utf8.encode(password);
     var hashPassword = sha256.convert(pas);
+    typeOfUser = 'user';
     emit(loginloading());
     DioHelper.postData(
       url: LOGINs,
       data: {
         'phone': phone,
         'password': hashPassword.toString(),
+        'type': 'user',
+        'typeOfUser': typeOfUser.toString()
       },
     ).then((value) {
       model = LoginModel.fromJson(value.data);

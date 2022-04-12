@@ -26,6 +26,7 @@ class RegisterCubit extends Cubit<RegisterState> {
     @required String phone,
     @required String password,
     @required String salt,
+    @required String typeOfUser,
 
     // @required String email,
   }) {
@@ -33,8 +34,19 @@ class RegisterCubit extends Cubit<RegisterState> {
     var salt = uuid.v4();
     var pas = utf8.encode(password);
     var hashPassword = sha256.convert(pas);
+    typeOfUser = 'user';
 
     emit(Registerloading());
+
+    // var data = {
+    //   'password': hashPassword.toString() + salt,
+    //   'phone': phone,
+    //   'name': name,
+    //   'salt': salt,
+    //   'typeOfUser': typeOfUser
+    // };
+    // print(data);
+
     DioHelper.postData(
       url: REIGSTERs,
       data: {
@@ -42,6 +54,7 @@ class RegisterCubit extends Cubit<RegisterState> {
         'phone': phone,
         'name': name,
         'salt': salt,
+        'typeOfUser': typeOfUser.toString()
       },
     ).then((value) {
       model = RegisterModel.fromJson(value.data);
