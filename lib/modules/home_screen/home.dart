@@ -127,12 +127,12 @@ class home extends StatelessWidget {
                       Row(
                         children: [
                           ServicesButton(
-                            image: 'assets/images/image (8).png',
+                            image: 'assets/images/gas.png',
                             text: 'gas',
                           ),
                           Spacer(),
                           ServicesButton(
-                            image: 'assets/images/image (11).png',
+                            image: 'assets/images/water.png',
                             text: 'water',
                           ),
                         ],
@@ -143,12 +143,13 @@ class home extends StatelessWidget {
                       Row(
                         children: [
                           ServicesButton(
-                            image: 'assets/images/image (7).png',
+                            // image: 'assets/images/image (7).png',
+                            image: 'assets/images/electric.png',
                             text: 'Electronic',
                           ),
                           Spacer(),
                           ServicesButton(
-                            image: 'assets/images/image (12).png',
+                            image: 'assets/images/phone.png',
                             text: 'phone',
                           ),
                         ],

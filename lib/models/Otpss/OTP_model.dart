@@ -16,6 +16,6 @@ class UserData {
 
   UserData.fromJason(Map<String, dynamic> json) {
     id = json['id'];
-    otp = json['name'];
+    otp = json['otp'];
   }
 }

@@ -5,6 +5,7 @@ import 'package:fl_toast/fl_toast.dart';
 import 'package:flutter/material.dart';
 import 'package:flutter_bloc/flutter_bloc.dart';
 import 'package:fluttertoast/fluttertoast.dart';
+import 'package:udemy_flutter/models/Service/cubit/service_cubit.dart';
 import 'package:udemy_flutter/models/Service/service.dart';
 import 'package:udemy_flutter/modules/cubit/homecubit_cubit.dart';
 import 'package:udemy_flutter/modules/cubit/homecubit_state.dart';
@@ -184,15 +185,16 @@ class ServicesButton extends StatelessWidget {
   Widget build(BuildContext context) {
     return Container(
         child: BlocProvider(
-      create: (context) => HomecubitCubit(),
-      child: BlocConsumer<HomecubitCubit, HomecubitState>(
+      create: (context) => ServiceCubit(),
+      child: BlocConsumer<ServiceCubit, ServiceState>(
         listener: (context, state) {},
         builder: (context, state) {
-          var cubit = HomecubitCubit.get(context);
+          var cubit = ServiceCubit.get(context);
           return InkWell(
             onTap: () {
               Navigator.push(context,
                   MaterialPageRoute(builder: (context) => Service_Screen()));
+              // cubit.changeindexscreen(text);
               cubit.changeindexscreen(text);
             },
             child: Stack(

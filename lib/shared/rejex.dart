@@ -29,7 +29,3 @@ String EmailAdrresValidator(String value) {
   else
     return null;
 }
-
-// String counter() {
-//   int counterIndex;
-// }

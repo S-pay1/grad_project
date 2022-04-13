@@ -31,32 +31,32 @@ class HomecubitCubit extends Cubit<HomecubitState> {
     'History',
   ];
 
-  int counterIndex;
+  // int counterIndex;
 
-  List<String> ChosseService = [
-    'gas',
-    'water',
-    'electric',
-    'phone',
-    'landing',
-    'wifi',
-  ];
-  List<String> Servicecode = [
-    'Service code',
-    'Service code',
-    'Service code',
-    'phone number',
-    'landing number',
-    'number',
-  ];
-  List<String> ServicCompany = [
-    'company',
-    'company',
-    'company',
-    'Network',
-    'landing number',
-    'number',
-  ];
+  // List<String> ChosseService = [
+  //   'gas',
+  //   'water',
+  //   'electric',
+  //   'phone',
+  //   'landing',
+  //   'wifi',
+  // ];
+  // List<String> Servicecode = [
+  //   'Service code',
+  //   'Service code',
+  //   'Service code',
+  //   'phone number',
+  //   'landing number',
+  //   'number',
+  // ];
+  // List<String> ServicCompany = [
+  //   'company',
+  //   'company',
+  //   'company',
+  //   'Network',
+  //   'landing number',
+  //   'number',
+  // ];
   void changeindex(int index) {
     currentindex = index;
     emit(HomecubitBottomNav());
@@ -67,13 +67,12 @@ class HomecubitCubit extends Cubit<HomecubitState> {
   //     emit(HomecubitService());
 
   // }
-  int indexOfServices;
-  void changeindexscreen(text) {
-    Global.indexOfServices = ChosseService.indexOf(text);
-    // Global.indexOfServices = Servicecode.indexOf(text);
-    // Global.indexOfServices = ServicCompany.indexOf(text);
-    print(Global.indexOfServices);
+  // int indexOfServices;
+  // void changeindexscreen(text) {
+  //   Global.indexOfServices = ChosseService.indexOf(text);
+  //   // Global.indexOfServices = Servicecode.indexOf(text);
+  //   // Global.indexOfServices = ServicCompany.indexOf(text);
+  //   print(Global.indexOfServices);
 
-    //emit(HomecubitService());
-  }
+  //emit(HomecubitService());
 }
