@@ -1,7 +1,7 @@
 {
     "logs": [
         {
-            "outputFile": "D:\\project\\FINAL_SPAY_PROJECT_backup\\S-pay\\build\\local_auth\\intermediates\\res\\merged\\debug\\values-am\\values-am.xml",
+            "outputFile": "C:\\Users\\Ezz\\Desktop\\grad_test\\build\\local_auth\\intermediates\\res\\merged\\debug\\values-am\\values-am.xml",
             "map": [
                 {
                     "source": "C:\\Users\\Ezz\\.gradle\\caches\\transforms-2\\files-2.1\\062c584e7105f32bea72d749c12db8a1\\appcompat-1.2.0\\res\\values-am\\values-am.xml",
@@ -57,7 +57,7 @@
             ]
         },
         {
-            "outputFile": "D:\\project\\FINAL_SPAY_PROJECT_backup\\S-pay\\build\\local_auth\\intermediates\\incremental\\mergeDebugResources\\merged.dir\\values-am\\values-am.xml",
+            "outputFile": "C:\\Users\\Ezz\\Desktop\\grad_test\\build\\local_auth\\intermediates\\incremental\\mergeDebugResources\\merged.dir\\values-am\\values-am.xml",
             "map": [
                 {
                     "source": "C:\\Users\\Ezz\\.gradle\\caches\\transforms-2\\files-2.1\\062c584e7105f32bea72d749c12db8a1\\appcompat-1.2.0\\res\\values-am\\values-am.xml",

@@ -1,7 +1,7 @@
 {
     "logs": [
         {
-            "outputFile": "D:\\project\\FINAL_SPAY_PROJECT_backup\\S-pay\\build\\local_auth\\intermediates\\res\\merged\\debug\\values\\values.xml",
+            "outputFile": "C:\\Users\\Ezz\\Desktop\\grad_test\\build\\local_auth\\intermediates\\res\\merged\\debug\\values\\values.xml",
             "map": [
                 {
                     "source": "D:\\flutter\\.pub-cache\\hosted\\pub.dartlang.org\\local_auth-1.1.11\\android\\src\\main\\res\\values\\colors.xml",
@@ -224,7 +224,7 @@
             ]
         },
         {
-            "outputFile": "D:\\project\\FINAL_SPAY_PROJECT_backup\\S-pay\\build\\local_auth\\intermediates\\incremental\\mergeDebugResources\\merged.dir\\values\\values.xml",
+            "outputFile": "C:\\Users\\Ezz\\Desktop\\grad_test\\build\\local_auth\\intermediates\\incremental\\mergeDebugResources\\merged.dir\\values\\values.xml",
             "map": [
                 {
                     "source": "D:\\flutter\\.pub-cache\\hosted\\pub.dartlang.org\\local_auth-1.1.11\\android\\src\\main\\res\\values\\colors.xml",

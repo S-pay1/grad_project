@@ -1,10 +1,10 @@
 {
     "logs": [
         {
-            "outputFile": "D:\\project\\FINAL_SPAY_PROJECT_backup\\S-pay\\build\\app\\intermediates\\incremental\\mergeDebugResources\\merged.dir\\values-night-v8\\values-night-v8.xml",
+            "outputFile": "C:\\Users\\Ezz\\Desktop\\grad_test\\build\\app\\intermediates\\incremental\\mergeDebugResources\\merged.dir\\values-night-v8\\values-night-v8.xml",
             "map": [
                 {
-                    "source": "D:\\project\\FINAL_SPAY_PROJECT_backup\\S-pay\\android\\app\\src\\main\\res\\values-night\\styles.xml",
+                    "source": "C:\\Users\\Ezz\\Desktop\\grad_test\\android\\app\\src\\main\\res\\values-night\\styles.xml",
                     "from": {
                         "startLines": "3,14",
                         "startColumns": "4,4",

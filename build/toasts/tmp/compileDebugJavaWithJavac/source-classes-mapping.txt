@@ -1,0 +1,4 @@
+com/example/toasts/BuildConfig.java
+ com.example.toasts.BuildConfig
+com/example/toasts/ToastsPlugin.java
+ com.example.toasts.ToastsPlugin
